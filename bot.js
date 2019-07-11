@@ -11,14 +11,14 @@ bot.on('ready', () =>{
 
 bot.on('guildMemberAdd', member =>{
 
-	const channel = member.guild.channels.find(channel => channel.name === "ᴡᴇʟᴄᴏᴍᴇ-ɴ-ʙʏᴇ1");
+	const channel = member.guild.channels.find(channel => channel.name === "ᴡᴇʟᴄᴏᴍᴇ-ɴ-ʙʏᴇ");
 	if(!channel) return;
 	channel.sendMessage(`${member}, Please read the rules.`);
 })
 
 bot.on('guildMemberRemove', member =>{
 
-	const channel = member.guild.channels.find(channel => channel.name === "ᴡᴇʟᴄᴏᴍᴇ-ɴ-ʙʏᴇ1");
+	const channel = member.guild.channels.find(channel => channel.name === "ᴡᴇʟᴄᴏᴍᴇ-ɴ-ʙʏᴇ");
 	if(!channel) return;
 	channel.sendMessage(`Look guys! Look! Look! ${member} disconnected.`)
 })
@@ -93,7 +93,7 @@ bot.on('message', msg=>{
 			if(!msg.guild.me.hasPermission("ADMINISTRATOR")) return msg.channel.sendMessage("I don't have the allowed permission to make an announcement!");
 			if(!args[1]) return msg.channel.sendMessage('What are you trying to announce?')
 			const aMessage = args.join(" ").slice(14);
-			const achannel = bot.channels.find(channel => channel.name === "ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ1");
+			const achannel = bot.channels.find(channel => channel.name === "ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ");
 			const aAuthor = msg.author.username
 			const agif = new Attachment('https://cdn.discordapp.com/attachments/598945838646951956/599001058374844437/men_gif.gif');
 			if(!achannel) return;
