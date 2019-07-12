@@ -107,7 +107,7 @@ bot.on('message', msg=>{
 			if(msg.author.id === '372420756610613259'){
 				if(!args[1]) return msg.channel.sendMessage('Who are you trying to send your regards?')
 				const regard = new Attachment('https://cdn.discordapp.com/attachments/598945838646951956/599001058374844437/men_gif.gif')
-				mention.sendMessage('𝕸𝖊𝖓𝖆𝖈𝖊 send their regards.');
+				mention.sendMessage('𝕸𝖊𝖓𝖆𝖈𝖊 sends their regards.');
 				mention.sendMessage(regard);
 				msg.channel.bulkDelete(1);
 			}
