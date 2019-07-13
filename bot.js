@@ -13,6 +13,8 @@ bot.on('guildMemberAdd', member =>{
 
 	const channel = member.guild.channels.find(channel => channel.name === "ᴡᴇʟᴄᴏᴍᴇ-ɴ-ʙʏᴇ");
 	if(!channel) return;
+	let role = member.guild.roles.find("name", "Unverified");
+	member.addRole(role.id);
 	channel.sendMessage(`${member}, Please read the rules.`);
 })
 
