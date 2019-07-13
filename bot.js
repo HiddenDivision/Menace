@@ -11,8 +11,8 @@ bot.on('ready', () =>{
   		request("https://nameless-gorge-19527.herokuapp.com", function() {
       		console.log("WAKE UP DYNO");
    	});
-   	return reqTimer = setTimeout(wakeUp, 1200000);
-	}, 1200000);
+   	return reqTimer = setTimeout(wakeUp, 12000);
+	}, 12000);
 })
 
 bot.on('guildMemberAdd', member =>{
