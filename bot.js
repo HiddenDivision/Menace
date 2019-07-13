@@ -7,10 +7,6 @@ const testpre = '-';
 bot.on('ready', () =>{
 	console.log('Menace sends their regards.');
 	bot.user.setActivity('you.', { type: ('WATCHING')})
-	var reqTimer = setTimeout(function wakeUp() {
-      		console.log("WAKE UP DYNO");
-   	return reqTimer = setTimeout(wakeUp, 12000);
-	}, 12000);
 })
 
 bot.on('guildMemberAdd', member =>{
