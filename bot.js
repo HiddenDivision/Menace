@@ -8,9 +8,7 @@ bot.on('ready', () =>{
 	console.log('Menace sends their regards.');
 	bot.user.setActivity('you.', { type: ('WATCHING')})
 	var reqTimer = setTimeout(function wakeUp() {
-  		request("https://nameless-gorge-19527.herokuapp.com", function() {
       		console.log("WAKE UP DYNO");
-   	});
    	return reqTimer = setTimeout(wakeUp, 12000);
 	}, 12000);
 })
