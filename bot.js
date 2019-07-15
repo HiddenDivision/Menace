@@ -15,7 +15,7 @@ bot.on('guildMemberAdd', member =>{
 	if(!channel) return;
 	let role = member.guild.roles.find("name", "Unverified");
 	member.addRole(role.id);
-	channel.sendMessage(`${member}, Please read the rules.`);
+	channel.sendMessage(`${member}, Please read the rules while an admin verifies you.`);
 })
 
 bot.on('guildMemberRemove', member =>{
