@@ -67,7 +67,7 @@ bot.on('message', msg=>{
 	}
 	if(msg.author.id === '345322541499285507')
 	{
-		if(activated === '1')
+		if(activated2 === '1')
 		{
 			console.log('wtf')
 			let content = msg.content
