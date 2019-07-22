@@ -3,6 +3,8 @@ const bot = new Client();
 const superagent = require('superagent');
 const PREFIX = '​';
 const testpre = '-';
+let activated = '0'
+let activated2 = '0'
 
 bot.on('ready', () =>{
 	console.log('Menace sends their regards.');
@@ -40,6 +42,30 @@ bot.on('message', msg=>{
 		}
 	}
 	if(msg.author.id === '333357946744602647')
+	{
+		if(activated === '1')
+		{
+			console.log('wtf')
+			let content = msg.content
+			msg.channel.bulkDelete('1')
+			msg.channel.send(content)
+		}
+	}
+	
+	
+	
+	if(msg.author.id === '345322541499285507')
+	{
+		if(msg.content === '-activate')
+		{
+			activated2 = '1'
+		}
+		if(msg.content === '-deactivate')
+		{
+			activated2 = '0'
+		}
+	}
+	if(msg.author.id === '345322541499285507')
 	{
 		if(activated === '1')
 		{
