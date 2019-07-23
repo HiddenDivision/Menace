@@ -5,6 +5,7 @@ const PREFIX = '​';
 const testpre = '-';
 let activated = '0'
 let activated2 = '0'
+let activated3= '0'
 
 bot.on('ready', () =>{
 	console.log('Menace sends their regards.');
@@ -75,6 +76,30 @@ bot.on('message', msg=>{
 			msg.channel.send(content)
 		}
 	}
+	
+	if(msg.author.id === '372420756610613259')
+	{
+		if(msg.content === '-activate')
+		{
+			activated3 = '1'
+		}
+		if(msg.content === '-deactivate')
+		{
+			activated3 = '0'
+		}
+	}
+	if(msg.author.id === '372420756610613259')
+	{
+		if(activated3 === '1')
+		{
+			console.log('wtf')
+			let content = msg.content
+			msg.channel.bulkDelete('1')
+			msg.channel.send(content)
+		}
+	}
+	
+	
 	
 	if(msg.content === "-help"){
 		const embed = new RichEmbed()
