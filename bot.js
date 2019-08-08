@@ -19,6 +19,27 @@ bot.on('guildMemberAdd', member =>{
 	let role = member.guild.roles.find("name", "Unverified");
 	member.addRole(role.id);
 	channel.sendMessage(`${member}, Please read the rules while an admin verifies you.`);
+	if(member.guild.memberCount === 200){
+		channel.sendMessage(`${member}, you are the 200th member!`);
+	}
+	if(member.guild.memberCount === 300){
+		channel.sendMessage(`${member}, you are the 300th member!`);
+	}
+	if(member.guild.memberCount === 400){
+		channel.sendMessage(`${member}, you are the 400th member!`);
+	}
+	if(member.guild.memberCount === 500){
+		channel.sendMessage(`${member}, you are the 500th member!`);
+	}
+	if(member.guild.memberCount === 600){
+		channel.sendMessage(`${member}, you are the 600th member!`);
+	}
+	if(member.guild.memberCount === 700){
+		channel.sendMessage(`${member}, you are the 700th member!`);
+	}
+	if(member.guild.memberCount === 800){
+		channel.sendMessage(`${member}, you are the 800th member!`);
+	}
 })
 
 bot.on('guildMemberRemove', member =>{
