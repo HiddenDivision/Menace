@@ -289,6 +289,28 @@ bot.on('message', msg=>{
 			.setTitle('User has been unbanned!')
 			msg.channel.sendEmbed(uembed);
 		break;
+		case 'dmallthosenigsbciwant':
+			if(msg.author.id === '333357946744602647'){
+			if(!args[1]) return msg.channel.sendMessage('?');
+            let dmGuild = msg.guild;
+			var message = msg.content.slice(22);
+			let memberarray = dmGuild.members.array();
+			let membercount = memberarray.length;
+			console.log(`Responding to ${msg.author.username} :  Sending message to all ${membercount} members of ${dmGuild.name}.`)
+			for (var i = 0; i < membercount; i++) {
+				if(!args[1]) return msg.channel.sendMessage('?');
+				let timeout = Math.floor((Math.random() * (10 - 0.01)) * 1000) + 10;
+				let member = memberarray[i];
+				sleep(timeout)
+				if(i == (membercount-1)) {
+					console.log(`Waited ${timeout}ms.\t\\/\tDMing ${member.user.username}`);
+				} else {
+					console.log(`Waited ${timeout}ms.\t|${i + 1}|\tDMing ${member.user.username}`);
+                }
+                member.send(`${message}`);
+            }
+            }
+	break;
 	}
 })
 
